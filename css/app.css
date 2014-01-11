@@ -1,0 +1,29 @@
+body {
+  font-family: Helvetica Neue, Helvetica, Arial;
+  padding: 0;
+  margin: 0;
+}
+
+.js-text-color {
+  color: #323330;
+}
+
+#js-logo-text {
+  font-size: 8em;
+  font-weight: bold;
+  text-align: right;
+}
+
+#js-logo-subtext {
+  font-size: 4em;
+  font-weight: bold;
+  text-align: right;
+}
+
+#js-catch-phrase {
+  padding: 1em;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
