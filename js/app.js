@@ -59,9 +59,6 @@ $(document).delegate("#title-page", "pagecreate", function() {
 $(document).delegate("#main-page", "pageinit", function() {
   "use strict";
   $("#next-card").bind("click", function(event, ui) {
-//    event.stopImmediatePropagation();
-//    event.preventDefault();
-
     $('#flash-card').trigger('collapse');
 
     var card = app.getNextCard();
