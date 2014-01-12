@@ -1,4 +1,4 @@
-var cards = [
+cards = [
   {
     "question": "Name the JavaScript primitive types",
     "answer": "boolean, number, string"

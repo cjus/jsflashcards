@@ -27,3 +27,7 @@ body {
   text-align: center;
 }
 
+/* fix to allow button text to wrap */
+.ui-btn-text {
+  white-space: normal;
+}
