@@ -1,10 +1,11 @@
-var app = (function(cardDeck) {
+var app = (function(cardDeck, Showdown) {
   "use strict";
 
   var appName = 'JS Flash Cards',
     version = '0.1',
     cardCount = 0,
-    cardsLength = cards.length;
+    cardsLength = cards.length,
+    markdownConverter = new Showdown.converter();
 
   function shuffle(array) {
     // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
@@ -28,7 +29,7 @@ var app = (function(cardDeck) {
   return {
     init: function() {
       cardCount = 0;
-      cardDeck = shuffle(cardDeck);
+      //cardDeck = shuffle(cardDeck);
     },
     getNextCard: function() {
       var card;
@@ -39,9 +40,13 @@ var app = (function(cardDeck) {
         cardCount = 0;
       }
       return card;
+    },
+    markdownToHTML: function(markdownText) {
+      var text = markdownText.replace(new RegExp('\\|', 'g'), '\n');
+      return markdownConverter.makeHtml(text);
     }
   };
-})(cards);
+})(cards, Showdown);
 
 /*
  jQueryMobile event handlers
@@ -65,8 +70,8 @@ $(document).delegate("#main-page", "pageinit", function() {
     if (card === undefined) {
       window.location.href = '#resources-page';
     } else {
-      $('#question').html(card.question);
-      $('#answer').html(card.answer);
+      $('#question').html(app.markdownToHTML(card.question));
+      $('#answer').html(app.markdownToHTML(card.answer));
     }
   });
 });
@@ -74,7 +79,7 @@ $(document).delegate("#main-page", "pageinit", function() {
 $(document).delegate('#main-page', 'pageshow', function() {
   "use strict";
   var card = app.getNextCard();
-  $('#question').html(card.question);
-  $('#answer').html(card.answer);
+  $('#question').html(app.markdownToHTML(card.question));
+  $('#answer').html(app.markdownToHTML(card.answer));
 });
 
