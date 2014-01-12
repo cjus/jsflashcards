@@ -29,7 +29,7 @@ var app = (function(cardDeck, Showdown) {
   return {
     init: function() {
       cardCount = 0;
-      //cardDeck = shuffle(cardDeck);
+      cardDeck = shuffle(cardDeck);
     },
     getNextCard: function() {
       var card;
