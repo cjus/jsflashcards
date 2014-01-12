@@ -20,8 +20,8 @@
       <div id="js-logo-text" class="js-text-color">JS</div>
       <div id="js-logo-subtext" class="js-text-color">Flash Cards</div>
       <div id="js-catch-phrase" class="js-text-color">See just how well you know JavaScript!</div>
-      <a href="#main-page" data-role="button">Ok, let's do this yo!</a>
-      <a href="#fork-this-page" data-role="button">Fork this</a>
+      <a href="#main-page" data-role="button" data-transition="flip">Ok, let's do this yo!</a>
+      <a href="#fork-this-page" data-role="button" data-transition="fade">Fork this</a>
     </div>
   </div>
 
@@ -44,6 +44,10 @@
   </div>
 
   <div data-role="page" id="fork-this-page">
+    <div data-role="header">
+      <a href="#title-page" data-icon="arrow-l" data-theme="b" data-transition="fade">Back</a>
+      <h1>JS Flash Cards</h1>
+    </div>
     <div data-role="content">
       <p>JSFlashCards is open sourced on GitHub. Fork the app and consider adding your own questions and issuing a pull request!</p>
       <a href="https://github.com/cjus/jsflashcards" data-role="button">Fork this</a>
@@ -59,10 +63,12 @@
       <p>Congrats you've made it through the deck! Press the restart button to shuffle the desk and make another pass.</p>
       <p>If you feel you need to brush up on your JS, make sure to checkout the following resources:</p>
       <ul>
-        <li>stackoverflow post: <a href="http://stackoverflow.com/questions/11246/best-resources-to-learn-javascript">Best resources to learn JavaScript</a></li>
+        <li><a href="http://net.tutsplus.com/tutorials/javascript-ajax/required-javascript-reading/">Required JavaScript
+          reading</a></li>
+        <li><a href="http://stackoverflow.com/questions/11246/best-resources-to-learn-javascript">Best resources to learn JavaScript</a></li>
       </ul>
       <hr>
-      <p>Help improve this desk! Send you Questions and Answers to: <a href="mailto:cjus34@gmail.com">cjus34@gmail.com</a></p>
+      <p>Help improve this deck! Send you Questions and Answers to: <a href="mailto:cjus34@gmail.com">cjus34@gmail.com</a></p>
     </div>
   </div>
 
