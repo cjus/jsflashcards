@@ -1,10 +1,11 @@
 var app = (function(cardDeck, Showdown) {
   "use strict";
 
-  var appName = 'JS Flash Cards',
-    version = '0.1',
+  var appName = 'Flash Cards',
+    version = '0.2',
     cardCount = 0,
-    cardsLength = cards.length,
+    cards = cardDeck.cards,
+    cardsLength = cardDeck.cards.length,
     markdownConverter = new Showdown.converter();
 
   function shuffle(array) {
@@ -29,12 +30,12 @@ var app = (function(cardDeck, Showdown) {
   return {
     init: function() {
       cardCount = 0;
-      cardDeck = shuffle(cardDeck);
+      cards = shuffle(cards);
     },
     getNextCard: function() {
       var card;
       if (cardCount !== cardsLength) {
-        card = cardDeck[cardCount];
+        card = cards[cardCount];
         cardCount = cardCount + 1;
       } else {
         cardCount = 0;
@@ -46,7 +47,7 @@ var app = (function(cardDeck, Showdown) {
       return markdownConverter.makeHtml(text);
     }
   };
-})(cards, Showdown);
+})(flashcardDeck, Showdown);
 
 /*
  jQueryMobile event handlers
@@ -54,6 +55,8 @@ var app = (function(cardDeck, Showdown) {
 $(document).bind('pageinit', function(event, ui) {
   "use strict";
   app.init();
+  $('#app-title').text(flashcardDeck.title);
+  $('#app-catch-phrase').text(flashcardDeck.catchPhrase);
 });
 
 $(document).delegate("#title-page", "pagecreate", function() {

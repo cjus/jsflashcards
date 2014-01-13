@@ -24,3 +24,7 @@ The following conventions are observed:
 * all questions being with a triple hash (###) to set a consistent font size
 * all JS keywords are surrounded with tick marks (`) for readability
 
+## Creating other flashcard apps
+
+In order to support the creation of other flashcard apps, the js/cards.js file contains the application title and catch phrase to display on the start screen.
+Forking this code and replacing the js/cards.js file should go a long way towards repurposing this app.

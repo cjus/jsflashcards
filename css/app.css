@@ -4,23 +4,23 @@ body {
   margin: 0;
 }
 
-.js-text-color {
+.text-color {
   color: #323330;
 }
 
-#js-logo-text {
+#logo-text {
   font-size: 6em;
   font-weight: bold;
   text-align: right;
 }
 
-#js-logo-subtext {
+#logo-subtext {
   font-size: 4em;
   font-weight: bold;
   text-align: right;
 }
 
-#js-catch-phrase {
+#catch-phrase {
   padding: 1em;
   font-size: 2em;
   font-weight: bold;
