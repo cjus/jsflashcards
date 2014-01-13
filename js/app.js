@@ -78,6 +78,7 @@ $(document).delegate("#main-page", "pageinit", function() {
 
 $(document).delegate('#main-page', 'pageshow', function() {
   "use strict";
+  $('#flash-card').trigger('collapse');
   var card = app.getNextCard();
   $('#question').html(app.markdownToHTML(card.question));
   $('#answer').html(app.markdownToHTML(card.answer));
