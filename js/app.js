@@ -59,6 +59,9 @@ $(document).bind('pageinit', function(event, ui) {
 $(document).delegate("#title-page", "pagecreate", function() {
   "use strict";
   $(this).css('background', '#f0db4f');
+  if (navigator.userAgent.match(/Android/i)) {
+    window.scrollTo(0, 1);
+  }
 });
 
 $(document).delegate("#main-page", "pageinit", function() {
@@ -83,12 +86,3 @@ $(document).delegate("#main-page", "pageinit", function() {
     nextCard();
   });
 });
-
-//$(document).delegate('#main-page', 'pageshow', function() {
-//  "use strict";
-//  $('#flash-card').trigger('collapse');
-//  var card = app.getNextCard();
-//  $('#question').html(app.markdownToHTML(card.question));
-//  $('#answer').html(app.markdownToHTML(card.answer));
-//});
-
