@@ -111,8 +111,20 @@ flashcardDeck = {
       "answer": "Number 4. Creates a global variable."
     },
     {
-      "question": "### The `Array` Constructor.",
-      "answer": "||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "question": "### What is the recommended way to create an array?",
+      "answer": "You can create an array using the `Array` constructor or the array literial notation []. Literals are preferred to the Array constructor. They are shorter, have a clearer syntax, and increase code readability:||    [1, 2, 3]; // Result: [1, 2, 3]|The behavior of `Array` can lead to unexpected results.||    new Array(1, 2, 3); // Result: [1, 2, 3]|    [3]; // Result: [3]|    new Array(3); // Result: []|    new Array('3') // Result: ['3']||In cases when there is only one argument passed to the `Array` constructor and when that argument is a `Number`, the constructor will return a new *sparse* array with the `length` property set to the value of the argument. It should be noted that **only** the `length` property of the new array will be set this way; the actual indexes of the array will not be initialized.||    var arr = new Array(3);|    arr[1]; // undefined|    1 in arr; // false, the index was not set.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### What can you tell me about the use of the `for in` loop construct?",
+      "answer": "Although arrays in JavaScript are objects, there are no good reasons to use the `for in` loop. In fact, there are a number of good reasons **against** the use of `for in` on arrays.||> **Note:** JavaScript arrays are **not** *associative arrays*. JavaScript only|> has [objects](#object.general) for mapping keys to values. And while associative|> arrays **preserve** order, objects **do not**.||Because the `for in` loop enumerates all the properties that are on the prototype chain and because the only way to exclude those properties is to use `hasOwnProperty`, it is already up to **twenty times** slower than a normal `for` loop.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### What's the best way to iterate over arrays?",
+      "answer": "In order to achieve the best performance when iterating over arrays, it is best to use the classic `for` loop.||    var list = [1, 2, 3, 4, 5, ...... 100000000];|    for(var i = 0, l = list.length; i < l; i++) {|        console.log(list[i]);|    }||There is one extra catch in the above example, which is the caching of the length of the array via `l = list.length`.||Although the `length` property is defined on the array itself, there is still an overhead for doing the lookup on each iteration of the loop. And while recent JavaScript engines **may** apply optimization in this case, there is no way of telling whether the code will run on one of these newer engines or not.||In fact, leaving out the caching may result in the loop being only **half as fast** as with the cached length.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### What happens when you set the value of an array's length property?",
+      "answer": "While the *getter* of the `length` property simply returns the number of elements that are contained in the array, the *setter* can be used to **truncate** the array.||    var foo = [1, 2, 3, 4, 5, 6];|    foo.length = 3;|    foo; // [1, 2, 3]||    foo.length = 6;|    foo.push(4);|    foo; // [1, 2, 3, undefined, undefined, undefined, 4]||Assigning a smaller length truncates the array. Increasing it creates a sparse array.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
     }
   ]
 };
