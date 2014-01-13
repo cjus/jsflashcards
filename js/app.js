@@ -63,9 +63,8 @@ $(document).delegate("#title-page", "pagecreate", function() {
 
 $(document).delegate("#main-page", "pageinit", function() {
   "use strict";
-  $("#next-card").bind("click", function(event, ui) {
+  function nextCard() {
     $('#flash-card').trigger('collapse');
-
     var card = app.getNextCard();
     if (card === undefined) {
       window.location.href = '#resources-page';
@@ -73,14 +72,23 @@ $(document).delegate("#main-page", "pageinit", function() {
       $('#question').html(app.markdownToHTML(card.question));
       $('#answer').html(app.markdownToHTML(card.answer));
     }
+  }
+  $("#next-card").bind("click", function(event, ui) {
+    nextCard();
+  });
+  $("#main-page").on("swipeleft", function(event) {
+    nextCard();
+  });
+  $(document).delegate('#main-page', 'pageshow', function() {
+    nextCard();
   });
 });
 
-$(document).delegate('#main-page', 'pageshow', function() {
-  "use strict";
-  $('#flash-card').trigger('collapse');
-  var card = app.getNextCard();
-  $('#question').html(app.markdownToHTML(card.question));
-  $('#answer').html(app.markdownToHTML(card.answer));
-});
+//$(document).delegate('#main-page', 'pageshow', function() {
+//  "use strict";
+//  $('#flash-card').trigger('collapse');
+//  var card = app.getNextCard();
+//  $('#question').html(app.markdownToHTML(card.question));
+//  $('#answer').html(app.markdownToHTML(card.answer));
+//});
 
