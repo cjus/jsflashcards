@@ -1,7 +1,7 @@
 cards = [
   {
     "question": "### Who wrote this book?|![book image](images/javascript-the-good-parts.png \"JavaScript book\")",
-    "answer": "Douglas Crockford."
+    "answer": "Douglas Crockford. Mr. Crockford is an American computer programmer and entrepreneur who is best known for his ongoing involvement in the development of the JavaScript language, for having popularized the data format JSON (JavaScript Object Notation), and for developing various JavaScript related tools such as JSLint and JSMin. He is currently a senior JavaScript architect at PayPal, and is also a writer and speaker on JavaScript, JSON, and related web technologies such as the Yahoo! User Interface Library (YUI).||ref: [Wikipedia](http://en.wikipedia.org/wiki/Douglas_Crockford)"
   },
   {
     "question": "### Name the JavaScript primitive types.",
@@ -70,5 +70,41 @@ cards = [
   {
     "question": "### How does JavaScript implement inheritance?",
     "answer": "JavaScript implements inheritance by allowing you to associate a prototypical object with any constructor function.||[Details of the object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model?redirectlocale=en-US&redirectslug=JavaScript%2FGuide%2FDetails_of_the_Object_Model)"
+  },
+  {
+    "question": "### How can you use primitive types to create objects?",
+    "answer": "Using the new operator:||    var numObject = new Number(10);|    console.log(typeOf numObject);|    > \"object\""
+  },
+  {
+    "question": "### What was JavaScript called before it was first released?",
+    "answer": "JavaScript was called Mocha before it was officially released as LiveScript. The language was later renamed to JavaScript when it was released as part of Netscape version 2.0B3 in September of 1995.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+  },
+  {
+    "question": "### What was the first use of server-side JavaScript?",
+    "answer": "Netscape introduced an implementation of the language for server-side scripting (SSJS) with Netscape Enterprise Server, first released in December, 1994 (soon after releasing JavaScript for browsers). Since the mid-2000s, there has been a proliferation of server-side JavaScript implementations.||Node.js is one recent notable example of server-side JavaScript being used in real-world applications.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+  },
+  {
+    "question": "### Originally considered a language for web authors and \"amateurs\" JavaScript was taken more seriously during what pivotal event?",
+    "answer": "The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside of web browsers, as seen by the proliferation of server-side JavaScript platforms.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+  },
+  {
+    "question": "### Who owns the 'JavaScript' trademark?",
+    "answer": "Today, \"JavaScript\" is a trademark of Oracle Corporation. It is used under license for technology invented and implemented by Netscape Communications and current entities such as the Mozilla Foundation.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+  },
+  {
+    "question": "### How does scoping in JavaScript differ from other programming languages?",
+    "answer": "JavaScript has function scoping (although, block scoping using the 'let' keyword was added in JavaScript 1.7). Most other programming languages support block scoping.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+  },
+  {
+    "question": "### Describe JavaScript objects.",
+    "answer": "JavaScript objects are associative arrays, augmented with prototypes. Object property names are string keys. They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10).||Properties and their values can be added, changed, or deleted at run-time.||Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop.||JavaScript has a small number of built-in objects such as Function and Date.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+  },
+  {
+    "question": "### Which of the following is not a JavaScript engine:||1. SpiderMonkey|2. V8|3. Rhino|4. Harmony",
+    "answer": "Number 4. Harmony."
+  },
+  {
+    "question": "### Using a variable without prefixing it with the var keyword causes which of the following:||1. Creates a local variable|2. Generates and error.|3. Creates and array|4. Creates a global variable.",
+    "answer": "Number 4. Creates a global variable."
   }
 ];
