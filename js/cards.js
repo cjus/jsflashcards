@@ -68,7 +68,7 @@ flashcardDeck = {
     },
     {
       "question": "### How are global variables created?",
-      "answer": "Global variables are created when you don't use the `var` keyword."
+      "answer": "Global variables are created when you create one outside an object and don't use the `var` keyword."
     },
     {
       "question": "### How does JavaScript implement inheritance?",
@@ -125,6 +125,30 @@ flashcardDeck = {
     {
       "question": "### What happens when you set the value of an array's length property?",
       "answer": "While the *getter* of the `length` property simply returns the number of elements that are contained in the array, the *setter* can be used to **truncate** the array.||    var foo = [1, 2, 3, 4, 5, 6];|    foo.length = 3;|    foo; // [1, 2, 3]||    foo.length = 6;|    foo.push(4);|    foo; // [1, 2, 3, undefined, undefined, undefined, 4]||Assigning a smaller length truncates the array. Increasing it creates a sparse array.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### In this code what is the resulting value of 'a'?||    var a=1;|    delete a;|",
+      "answer": "The value of 'a' remains 1 after the delete call. Such properties have a set of attributes, one of which is`DontDelete`. Variable and function declarations in global and function code always create properties with `DontDelete`, and therefore cannot be deleted.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### In this code what is the resulting value of 'obj.x'?||    var obj = {x: 1};|    delete obj.x;",
+      "answer": "The result is that obj.x is now removed from obj.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### Which functions execute `eval` in disguise?",
+      "answer": "The timeout functions `setTimeout` and `setInterval` can both take a string as their first argument. This string will **always** get executed in the global scope since `eval` is not being called directly in that case.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### Why are there potential security issues with the use of `eval`?",
+      "answer": "`eval` is a security problem, because it executes **any** code given to it. It should **never** be used with strings of unknown or untrusted origins.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### How does scoping work with `eval`?",
+      "answer": "The `eval` function will execute a string of JavaScript code in the local scope.||    var foo = 1;|    function test() {|        var foo = 2;|        eval('foo = 3');|        return foo;|    }|    test(); // 3|    foo; // 1||However, `eval` only executes in the local scope when it is being called directly *and* when the name of the called function is actually `eval`.||    var foo = 1;|    function test() {|        var foo = 2;|        var bar = eval;|        bar('foo = 3');|        return foo;|    }|    test(); // 2|    foo; // 3||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### How does JavaScript handle semicolons?",
+      "answer": "Although JavaScript has C style syntax, it does **not** enforce the use of semicolons in the source code, so it is possible to omit them.|JavaScript is not a semicolon-less language. In fact, it needs the semicolons in order to understand the source code. Therefore, the JavaScript parser **automatically** inserts them whenever it encounters a parse error due to a missing semicolon.||    var foo = function() {|    } // parse error, semicolon expected|    test()||Insertion happens, and the parser tries again.||    var foo = function() {|    }; // no error, parser continues|    test()||The automatic insertion of semicolon is considered to be one of **biggest** design flaws in the language because it *can* change the behavior of code.||> **Note:** The JavaScript parser does not \"correctly\" handle return statements |> that are followed by a new line. While this is not necessarily the fault of |> the automatic semicolon insertion, it can still be an unwanted side-effect.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
     }
   ]
 };
