@@ -79,6 +79,7 @@ $(document).delegate("#main-page", "pageinit", function() {
       $('#answer').html(app.markdownToHTML(card.answer));
     }
   }
+
   $("#next-card").bind("click", function(event, ui) {
     nextCard();
   });
@@ -92,3 +93,5 @@ $(document).delegate("#main-page", "pageinit", function() {
     nextCard();
   });
 });
+
+

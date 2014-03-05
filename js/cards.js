@@ -149,6 +149,42 @@ flashcardDeck = {
     {
       "question": "### How does JavaScript handle semicolons?",
       "answer": "Although JavaScript has C style syntax, it does **not** enforce the use of semicolons in the source code, so it is possible to omit them.|JavaScript is not a semicolon-less language. In fact, it needs the semicolons in order to understand the source code. Therefore, the JavaScript parser **automatically** inserts them whenever it encounters a parse error due to a missing semicolon.||    var foo = function() {|    } // parse error, semicolon expected|    test()||Insertion happens, and the parser tries again.||    var foo = function() {|    }; // no error, parser continues|    test()||The automatic insertion of semicolon is considered to be one of **biggest** design flaws in the language because it *can* change the behavior of code.||> **Note:** The JavaScript parser does not \"correctly\" handle return statements |> that are followed by a new line. While this is not necessarily the fault of |> the automatic semicolon insertion, it can still be an unwanted side-effect.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+    },
+    {
+      "question": "### What are some ways in which you can organize your JS code?",
+      "answer": "With inheritance and composition using mixins and JavaScript objects. Additionally, using MVC frameworks can help organize your code."
+    },
+    {
+      "question": "### What are some of the benefits of using namespaces?",
+      "answer": "Helps minimize polluting the global namespace. Simulates modules."
+    },
+    {
+      "question": "### What is an object literal?",
+      "answer": "An object created using the object literal syntax { } || An object created using the object literial syntax."
+    },
+    {
+      "question": "### What is a JavaScript namespace?",
+      "answer": "A named object created using an object literal and which has variables and methods attached to it."
+    },
+    {
+      "question": "### Why use object prototypes?",
+      "answer": "Prototypes allow object instances to be extended at runtime by adding behaviors to their share prototype. Object prototypes are shared between all instances of an object and thus help reduce memory requirements."
+    },
+    {
+      "question": "### What are some examples of creational design patterns?",
+      "answer": "Constructor, factory, abstract, prototype, sington, builder."
+    },
+    {
+      "question": "### What are some of the new features introduced in ES5?",
+      "answer": "Object.create, Object.defineProperty, Object.defineProperties"
+    },
+    {
+      "question": "### When where ```Object.create```, ```Object.defineProperty```, ```Object.defineProperties``` introduced into JavaScript?",
+      "answer": "ES5"
+    },
+    {
+      "question": "### Does JavaScript have object methods?",
+      "answer": "Technically, no. JavaScript has properties which contain functions."
     }
   ]
 };
