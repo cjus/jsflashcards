@@ -4,7 +4,7 @@ flashcardDeck = {
   cards: [
     {
       "question": "### Who wrote this book?|![book image](images/javascript-the-good-parts.png \"JavaScript book\")",
-      "answer": "Douglas Crockford. Mr. Crockford is an American computer programmer and entrepreneur who is best known for his ongoing involvement in the development of the JavaScript language, for having popularized the data format JSON (JavaScript Object Notation), and for developing various JavaScript related tools such as JSLint and JSMin. He is currently a senior JavaScript architect at PayPal, and is also a writer and speaker on JavaScript, JSON, and related web technologies such as the Yahoo! User Interface Library (YUI).||ref: [Wikipedia](http://en.wikipedia.org/wiki/Douglas_Crockford)"
+      "answer": "Douglas Crockford. Mr. Crockford is an American computer programmer and entrepreneur who is best known for his ongoing involvement in the development of the JavaScript language, for having popularized the data format JSON (JavaScript Object Notation), and for developing various JavaScript related tools such as JSLint and JSMin. He is currently a senior JavaScript architect at PayPal, and is also a writer and speaker on JavaScript, JSON, and related web technologies such as the Yahoo! User Interface Library (YUI).||<sup>ref: [Wikipedia](http://en.wikipedia.org/wiki/Douglas_Crockford)</sup>"
     },
     {
       "question": "### Name the JavaScript primitive types.",
@@ -80,27 +80,27 @@ flashcardDeck = {
     },
     {
       "question": "### What was JavaScript called before it was first released?",
-      "answer": "JavaScript was called Mocha before it was officially released as LiveScript. The language was later renamed to JavaScript when it was released as part of Netscape version 2.0B3 in September of 1995.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+      "answer": "JavaScript was called Mocha before it was officially released as LiveScript. The language was later renamed to JavaScript when it was released as part of Netscape version 2.0B3 in September of 1995.||<sup>ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)</sup>"
     },
     {
       "question": "### What was the first use of server-side JavaScript?",
-      "answer": "Netscape introduced an implementation of the language for server-side scripting (SSJS) with Netscape Enterprise Server, first released in December, 1994 (soon after releasing JavaScript for browsers). Since the mid-2000s, there has been a proliferation of server-side JavaScript implementations.||Node.js is one recent notable example of server-side JavaScript being used in real-world applications.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+      "answer": "Netscape introduced an implementation of the language for server-side scripting (SSJS) with Netscape Enterprise Server, first released in December, 1994 (soon after releasing JavaScript for browsers). Since the mid-2000s, there has been a proliferation of server-side JavaScript implementations.||Node.js is one recent notable example of server-side JavaScript being used in real-world applications.||<sup>ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)</sup>"
     },
     {
       "question": "### Originally considered a language for web authors and \"amateurs\" JavaScript was taken more seriously during what pivotal event?",
-      "answer": "The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside of web browsers, as seen by the proliferation of server-side JavaScript platforms.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+      "answer": "The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside of web browsers, as seen by the proliferation of server-side JavaScript platforms.||<sup>ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)</sup>"
     },
     {
       "question": "### Who owns the 'JavaScript' trademark?",
-      "answer": "Today, \"JavaScript\" is a trademark of Oracle Corporation. It is used under license for technology invented and implemented by Netscape Communications and current entities such as the Mozilla Foundation.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+      "answer": "Today, \"JavaScript\" is a trademark of Oracle Corporation. It is used under license for technology invented and implemented by Netscape Communications and current entities such as the Mozilla Foundation.||<sup>ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)</sup>"
     },
     {
       "question": "### How does scoping in JavaScript differ from other programming languages?",
-      "answer": "JavaScript has function scoping (although, block scoping using the `let` keyword was added in JavaScript 1.7). Most other programming languages support block scoping.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+      "answer": "JavaScript has function scoping (although, block scoping using the `let` keyword was added in JavaScript 1.7). Most other programming languages support block scoping.||<sup>ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)</sup>"
     },
     {
       "question": "### Describe JavaScript objects.",
-      "answer": "JavaScript objects are associative arrays, augmented with prototypes. Object property names are string keys. They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10).||Properties and their values can be added, changed, or deleted at run-time.||Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop.||JavaScript has a small number of built-in objects such as Function and Date.||ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)"
+      "answer": "JavaScript objects are associative arrays, augmented with prototypes. Object property names are string keys. They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10).||Properties and their values can be added, changed, or deleted at run-time.||Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop.||JavaScript has a small number of built-in objects such as Function and Date.||<sup>ref: [Wikipedia](http://en.wikipedia.org/wiki/JavaScript)</sup>"
     },
     {
       "question": "### Which of the following is not a JavaScript engine:||1. SpiderMonkey|2. V8|3. Rhino|4. Harmony",
@@ -112,15 +112,15 @@ flashcardDeck = {
     },
     {
       "question": "### What is the recommended way to create an array?",
-      "answer": "You can create an array using the `Array` constructor or the array literial notation []. Literals are preferred to the Array constructor. They are shorter, have a clearer syntax, and increase code readability:||    [1, 2, 3]; // Result: [1, 2, 3]|The behavior of `Array` can lead to unexpected results.||    new Array(1, 2, 3); // Result: [1, 2, 3]|    [3]; // Result: [3]|    new Array(3); // Result: []|    new Array('3') // Result: ['3']||In cases when there is only one argument passed to the `Array` constructor and when that argument is a `Number`, the constructor will return a new *sparse* array with the `length` property set to the value of the argument. It should be noted that **only** the `length` property of the new array will be set this way; the actual indexes of the array will not be initialized.||    var arr = new Array(3);|    arr[1]; // undefined|    1 in arr; // false, the index was not set.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "answer": "You can create an array using the `Array` constructor or the array literial notation []. Literals are preferred to the Array constructor. They are shorter, have a clearer syntax, and increase code readability:||    [1, 2, 3]; // Result: [1, 2, 3]|The behavior of `Array` can lead to unexpected results.||    new Array(1, 2, 3); // Result: [1, 2, 3]|    [3]; // Result: [3]|    new Array(3); // Result: []|    new Array('3') // Result: ['3']||In cases when there is only one argument passed to the `Array` constructor and when that argument is a `Number`, the constructor will return a new *sparse* array with the `length` property set to the value of the argument. It should be noted that **only** the `length` property of the new array will be set this way; the actual indexes of the array will not be initialized.||    var arr = new Array(3);|    arr[1]; // undefined|    1 in arr; // false, the index was not set.||<sup>ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)</sup>"
     },
     {
       "question": "### What can you tell me about the use of the `for in` loop construct?",
-      "answer": "Although arrays in JavaScript are objects, there are no good reasons to use the `for in` loop. In fact, there are a number of good reasons **against** the use of `for in` on arrays.||> **Note:** JavaScript arrays are **not** *associative arrays*. JavaScript only|> has [objects](#object.general) for mapping keys to values. And while associative|> arrays **preserve** order, objects **do not**.||Because the `for in` loop enumerates all the properties that are on the prototype chain and because the only way to exclude those properties is to use `hasOwnProperty`, it is already up to **twenty times** slower than a normal `for` loop.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "answer": "Although arrays in JavaScript are objects, there are no good reasons to use the `for in` loop. In fact, there are a number of good reasons **against** the use of `for in` on arrays.||> **Note:** JavaScript arrays are **not** *associative arrays*. JavaScript only|> has [objects](#object.general) for mapping keys to values. And while associative|> arrays **preserve** order, objects **do not**.||Because the `for in` loop enumerates all the properties that are on the prototype chain and because the only way to exclude those properties is to use `hasOwnProperty`, it is already up to **twenty times** slower than a normal `for` loop.||<sup>ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)</sup>"
     },
     {
       "question": "### What's the best way to iterate over arrays?",
-      "answer": "In order to achieve the best performance when iterating over arrays, it is best to use the classic `for` loop.||    var list = [1, 2, 3, 4, 5, ...... 100000000];|    for(var i = 0, l = list.length; i < l; i++) {|        console.log(list[i]);|    }||There is one extra catch in the above example, which is the caching of the length of the array via `l = list.length`.||Although the `length` property is defined on the array itself, there is still an overhead for doing the lookup on each iteration of the loop. And while recent JavaScript engines **may** apply optimization in this case, there is no way of telling whether the code will run on one of these newer engines or not.||In fact, leaving out the caching may result in the loop being only **half as fast** as with the cached length.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "answer": "In order to achieve the best performance when iterating over arrays, it is best to use the classic `for` loop.||    var list = [1, 2, 3, 4, 5, ...... 100000000];|    for(var i = 0, l = list.length; i < l; i++) {|        console.log(list[i]);|    }||There is one extra catch in the above example, which is the caching of the length of the array via `l = list.length`.||Although the `length` property is defined on the array itself, there is still an overhead for doing the lookup on each iteration of the loop. And while recent JavaScript engines **may** apply optimization in this case, there is no way of telling whether the code will run on one of these newer engines or not.||In fact, leaving out the caching may result in the loop being only **half as fast** as with the cached length.||<sup>ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)</sup>"
     },
     {
       "question": "### What happens when you set the value of an array's length property?",
@@ -128,27 +128,27 @@ flashcardDeck = {
     },
     {
       "question": "### In this code what is the resulting value of 'a'?||    var a=1;|    delete a;|",
-      "answer": "The value of 'a' remains 1 after the delete call. Such properties have a set of attributes, one of which is`DontDelete`. Variable and function declarations in global and function code always create properties with `DontDelete`, and therefore cannot be deleted.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "answer": "The value of 'a' remains 1 after the delete call. Such properties have a set of attributes, one of which is`DontDelete`. Variable and function declarations in global and function code always create properties with `DontDelete`, and therefore cannot be deleted.||<sup>ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)</sup>"
     },
     {
       "question": "### In this code what is the resulting value of 'obj.x'?||    var obj = {x: 1};|    delete obj.x;",
-      "answer": "The result is that obj.x is now removed from obj.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "answer": "The result is that obj.x is now removed from obj.||<sup>ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)</sup>"
     },
     {
       "question": "### Which functions execute `eval` in disguise?",
-      "answer": "The timeout functions `setTimeout` and `setInterval` can both take a string as their first argument. This string will **always** get executed in the global scope since `eval` is not being called directly in that case.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "answer": "The timeout functions `setTimeout` and `setInterval` can both take a string as their first argument. This string will **always** get executed in the global scope since `eval` is not being called directly in that case.||<sup>ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)</sup>"
     },
     {
       "question": "### Why are there potential security issues with the use of `eval`?",
-      "answer": "`eval` is a security problem, because it executes **any** code given to it. It should **never** be used with strings of unknown or untrusted origins.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "answer": "`eval` is a security problem, because it executes **any** code given to it. It should **never** be used with strings of unknown or untrusted origins.||<sup>ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)</sup>"
     },
     {
       "question": "### How does scoping work with `eval`?",
-      "answer": "The `eval` function will execute a string of JavaScript code in the local scope.||    var foo = 1;|    function test() {|        var foo = 2;|        eval('foo = 3');|        return foo;|    }|    test(); // 3|    foo; // 1||However, `eval` only executes in the local scope when it is being called directly *and* when the name of the called function is actually `eval`.||    var foo = 1;|    function test() {|        var foo = 2;|        var bar = eval;|        bar('foo = 3');|        return foo;|    }|    test(); // 2|    foo; // 3||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "answer": "The `eval` function will execute a string of JavaScript code in the local scope.||    var foo = 1;|    function test() {|        var foo = 2;|        eval('foo = 3');|        return foo;|    }|    test(); // 3|    foo; // 1||However, `eval` only executes in the local scope when it is being called directly *and* when the name of the called function is actually `eval`.||    var foo = 1;|    function test() {|        var foo = 2;|        var bar = eval;|        bar('foo = 3');|        return foo;|    }|    test(); // 2|    foo; // 3||<sup>ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)</sup>"
     },
     {
       "question": "### How does JavaScript handle semicolons?",
-      "answer": "Although JavaScript has C style syntax, it does **not** enforce the use of semicolons in the source code, so it is possible to omit them.|JavaScript is not a semicolon-less language. In fact, it needs the semicolons in order to understand the source code. Therefore, the JavaScript parser **automatically** inserts them whenever it encounters a parse error due to a missing semicolon.||    var foo = function() {|    } // parse error, semicolon expected|    test()||Insertion happens, and the parser tries again.||    var foo = function() {|    }; // no error, parser continues|    test()||The automatic insertion of semicolon is considered to be one of **biggest** design flaws in the language because it *can* change the behavior of code.||> **Note:** The JavaScript parser does not \"correctly\" handle return statements |> that are followed by a new line. While this is not necessarily the fault of |> the automatic semicolon insertion, it can still be an unwanted side-effect.||ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)"
+      "answer": "Although JavaScript has C style syntax, it does **not** enforce the use of semicolons in the source code, so it is possible to omit them.|JavaScript is not a semicolon-less language. In fact, it needs the semicolons in order to understand the source code. Therefore, the JavaScript parser **automatically** inserts them whenever it encounters a parse error due to a missing semicolon.||    var foo = function() {|    } // parse error, semicolon expected|    test()||Insertion happens, and the parser tries again.||    var foo = function() {|    }; // no error, parser continues|    test()||The automatic insertion of semicolon is considered to be one of **biggest** design flaws in the language because it *can* change the behavior of code.||> **Note:** The JavaScript parser does not \"correctly\" handle return statements |> that are followed by a new line. While this is not necessarily the fault of |> the automatic semicolon insertion, it can still be an unwanted side-effect.||<sup>ref: [JavaScript Garden](https://github.com/BonsaiDen/JavaScript-Garden)</sup>"
     },
     {
       "question": "### What are some ways in which you can organize your JS code?",
@@ -189,6 +189,14 @@ flashcardDeck = {
     {
       "question": "### When were `Object.create`, `Object.defineProperty`, `Object.defineProperties` introduced into JavaScript?",
       "answer": "ES5"
+    },
+    {
+      "question": "### What is the outcome of the following statements and why?||    console.log(\"5\" - 1);|    console.log(\"5\" + 1);",
+      "answer": "The first statement produces `4` and the second returns `51`. Not at all what might be expected. The reason for this is that in the second statement JavaScript attempts string concatenation before numeric addition due to the presence of the plus operator. This is a consequence of JavaScripts type coercion rules.||<sup>ref: Haverbeke, Marijn (2014-12-04). Eloquent JavaScript: A Modern Introduction to Programming. No Starch Press.</sup>"
+    },
+    {
+      "question": "### Explain the following results||    console.log(null == undefined);| true||    console.log(null == 0);|  false",
+      "answer": "JavaScript uses a complicated and confusing set of rules to determine what to do. In most cases, it just tries to convert one of the values to the other value's type. However, when null or undefined occurs on either side of the operator, it produces `true` only if both sides are one of `null` or `undefined`.||<sup>ref: Haverbeke, Marijn (2014-12-04). Eloquent JavaScript: A Modern Introduction to Programming. No Starch Press.</sup>"
     }
   ]
 };
