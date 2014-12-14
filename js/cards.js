@@ -172,19 +172,23 @@ flashcardDeck = {
     },
     {
       "question": "### What are some examples of creational design patterns?",
-      "answer": "Constructor, factory, abstract, prototype, sington, builder."
+      "answer": "Constructor, factory, abstract, prototype, singleton, builder."
     },
     {
       "question": "### What are some of the new features introduced in ES5?",
       "answer": "Object.create, Object.defineProperty, Object.defineProperties"
     },
     {
-      "question": "### When where ```Object.create```, ```Object.defineProperty```, ```Object.defineProperties``` introduced into JavaScript?",
+      "question": "### When where `Object.create`, `Object.defineProperty`, `Object.defineProperties` introduced into JavaScript?",
       "answer": "ES5"
     },
     {
       "question": "### Does JavaScript have object methods?",
       "answer": "Technically, no. JavaScript has properties which contain functions."
+    },
+    {
+      "question": "### When were `Object.create`, `Object.defineProperty`, `Object.defineProperties` introduced into JavaScript?",
+      "answer": "ES5"
     }
   ]
 };
