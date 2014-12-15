@@ -3,6 +3,14 @@ flashcardDeck = {
   catchPhrase: "Test how well you know JavaScript",
   cards: [
     {
+      "question": "### Why is the `void` used as a prefix on Immediately Invoked Function Expressions?",
+      "answer": "When using an immediately-invoked function expression, `void` can be used to force the function keyword to be treated as an expression instead of a declaration.||    void function iife() {|      var bar = function () {};|      var baz = function () {};|      var foo = function () {|        bar();|        baz();|        };|      var biz = function () {};||      foo();|      biz();|    }();||<sup>ref: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void)</sup>"
+    },
+    {
+      "question": "### Tell me about the void in JavaScript",
+      "answer": "The void operator evaluates the given expression and then returns undefined. This operator allows inserting expressions that produce side effects into places where an expression that evaluates to undefined is desired. When using an immediately-invoked function expression, void can be used to force the function keyword to be treated as an expression instead of a declaration.||<sup>ref: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void)</sup>"
+    },
+    {
       "question": "### Who wrote this book?|![book image](images/javascript-the-good-parts.png \"JavaScript book\")",
       "answer": "Douglas Crockford. Mr. Crockford is an American computer programmer and entrepreneur who is best known for his ongoing involvement in the development of the JavaScript language, for having popularized the data format JSON (JavaScript Object Notation), and for developing various JavaScript related tools such as JSLint and JSMin. He is currently a senior JavaScript architect at PayPal, and is also a writer and speaker on JavaScript, JSON, and related web technologies such as the Yahoo! User Interface Library (YUI).||<sup>ref: [Wikipedia](http://en.wikipedia.org/wiki/Douglas_Crockford)</sup>"
     },
