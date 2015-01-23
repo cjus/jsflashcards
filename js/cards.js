@@ -3,6 +3,22 @@ flashcardDeck = {
   catchPhrase: "Test how well you know JavaScript",
   cards: [
     {
+      "question": "### Which JavaScript values don't have properties?",
+      "answer": "Almost all JavaScript values have properties. The exceptions are null and undefined.||<sup>ref: Haverbeke, Marijn (2014-12-04). Eloquent JavaScript: A Modern Introduction to Programming. No Starch Press.</sup>"
+    },
+    {
+      "question": "### What is meant by the statement \"some functions have side effects\"?",
+      "answer": "In computer science, a function or expression is said to have a side effect if, in addition to returning a value, it also modifies some state or has an observable interaction with calling functions or the outside world. For example, a function might modify a global variable or static variable, modify one of its arguments, raise an exception, write data to a display or file, read data, or call other side-effecting functions. In the presence of side effects, a program's behavior may depend on history; that is, the order of evaluation matters. Understanding and debugging a function with side effects requires knowledge about the context and its possible histories.||<sup>ref: [Wikipedia](http://en.wikipedia.org/wiki/Side_effect_%28computer_science%29)</sup>"
+    },
+    {
+      "question": "### What is a common disadvantage when using recursion?",
+      "answer": "It can result in slower code. Running through a simple loop is a lot cheaper than calling a function multiple times. The dilemma of speed versus elegance is an interesting one. You can see it as a kind of continuum between human-friendliness and machine-friendliness. Almost any program can be made faster by making it bigger and more convoluted. The programmer must decide on an appropriate balance.||<sup>ref: Haverbeke, Marijn (2014-12-04). Eloquent JavaScript: A Modern Introduction to Programming. No Starch Press.</sup>"
+    },
+    {
+      "question": "### How can you test whether a variable has a real value instead of `null` or `undefined`?",
+      "answer": "You can simply compare it to `null` with the == (or !=) operator||<sup>ref: Haverbeke, Marijn (2014-12-04). Eloquent JavaScript: A Modern Introduction to Programming. No Starch Press.</sup>"
+    },
+    {
       "question": "### Why is the `void` used as a prefix on Immediately Invoked Function Expressions?",
       "answer": "When using an immediately-invoked function expression, `void` can be used to force the function keyword to be treated as an expression instead of a declaration.||    void function iife() {|      var bar = function () {};|      var baz = function () {};|      var foo = function () {|        bar();|        baz();|        };|      var biz = function () {};||      foo();|      biz();|    }();||<sup>ref: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void)</sup>"
     },
@@ -187,7 +203,7 @@ flashcardDeck = {
       "answer": "Object.create, Object.defineProperty, Object.defineProperties"
     },
     {
-      "question": "### When where `Object.create`, `Object.defineProperty`, `Object.defineProperties` introduced into JavaScript?",
+      "question": "### When were `Object.create`, `Object.defineProperty`, `Object.defineProperties` introduced into JavaScript?",
       "answer": "ES5"
     },
     {
